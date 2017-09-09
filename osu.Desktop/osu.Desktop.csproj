@@ -173,6 +173,7 @@
     <None Include="..\osu.licenseheader">
       <Link>osu.licenseheader</Link>
     </None>
+    <None Include="app.config" />
     <None Include="OpenTK.dll.config" />
     <None Include="osu!.res" />
     <None Include="packages.config" />
@@ -225,6 +226,10 @@
     <ProjectReference Include="..\osu.Desktop.Tests\osu.Desktop.Tests.csproj">
       <Project>{230ac4f3-7783-49fb-9aec-b83cda3b9f3d}</Project>
       <Name>osu.Desktop.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\osu.Game.Rulesets.Hirobeat\osu.Game.Rulesets.Hirobeat.csproj">
+      <Project>{a19eab86-a32a-4110-b46e-267654bfaaa0}</Project>
+      <Name>osu.Game.Rulesets.Hirobeat</Name>
     </ProjectReference>
     <ProjectReference Include="..\osu.Game.Rulesets.Osu\osu.Game.Rulesets.Osu.csproj">
       <Project>{c92a607b-1fdd-4954-9f92-03ff547d9080}</Project>

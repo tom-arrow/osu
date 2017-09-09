@@ -43,7 +43,7 @@ namespace osu.Game.Rulesets.Osu.Objects.Drawables
             Hide();
         }
 
-        protected virtual void UpdatePreemptState()
+        protected virtual void  UpdatePreemptState()
         {
             this.FadeIn(TIME_FADEIN);
         }
