@@ -9,8 +9,6 @@ using osu.Game.Rulesets.Mods;
 using osu.Game.Rulesets.UI;
 using System.Collections.Generic;
 using osu.Framework.Graphics;
-using osu.Game.Rulesets.Catch.Scoring;
-using osu.Game.Rulesets.Scoring;
 using osu.Framework.Input.Bindings;
 
 namespace osu.Game.Rulesets.Catch
@@ -93,15 +91,11 @@ namespace osu.Game.Rulesets.Catch
             }
         }
 
-        public override Mod GetAutoplayMod() => new ModAutoplay();
-
         public override string Description => "osu!catch";
 
         public override Drawable CreateIcon() => new SpriteIcon { Icon = FontAwesome.fa_osu_fruits_o };
 
         public override DifficultyCalculator CreateDifficultyCalculator(Beatmap beatmap) => new CatchDifficultyCalculator(beatmap);
-
-        public override ScoreProcessor CreateScoreProcessor() => new CatchScoreProcessor();
 
         public override int LegacyID => 2;
 

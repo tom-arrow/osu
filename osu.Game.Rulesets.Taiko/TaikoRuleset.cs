@@ -9,8 +9,6 @@ using osu.Game.Rulesets.Taiko.UI;
 using osu.Game.Rulesets.UI;
 using System.Collections.Generic;
 using osu.Framework.Graphics;
-using osu.Game.Rulesets.Scoring;
-using osu.Game.Rulesets.Taiko.Scoring;
 using osu.Framework.Input.Bindings;
 
 namespace osu.Game.Rulesets.Taiko
@@ -95,15 +93,11 @@ namespace osu.Game.Rulesets.Taiko
             }
         }
 
-        public override Mod GetAutoplayMod() => new TaikoModAutoplay();
-
         public override string Description => "osu!taiko";
 
         public override Drawable CreateIcon() => new SpriteIcon { Icon = FontAwesome.fa_osu_taiko_o };
 
         public override DifficultyCalculator CreateDifficultyCalculator(Beatmap beatmap) => new TaikoDifficultyCalculator(beatmap);
-
-        public override ScoreProcessor CreateScoreProcessor() => new TaikoScoreProcessor();
 
         public override int LegacyID => 1;
 

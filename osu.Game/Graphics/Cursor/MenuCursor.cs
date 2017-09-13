@@ -32,7 +32,7 @@ namespace osu.Game.Graphics.Cursor
 
                 // don't start rotating until we're moved a minimum distance away from the mouse down location,
                 // else it can have an annoying effect.
-                startRotation |= Vector2.Distance(state.Mouse.Position, state.Mouse.PositionMouseDown.Value) > 30;
+                startRotation |= Vector2Extensions.Distance(state.Mouse.Position, state.Mouse.PositionMouseDown.Value) > 30;
 
                 if (startRotation)
                 {
@@ -131,7 +131,7 @@ namespace osu.Game.Graphics.Cursor
                             },
                             AdditiveLayer = new Sprite
                             {
-                                BlendingMode = BlendingMode.Additive,
+                                Blending = BlendingMode.Additive,
                                 Colour = colour.Pink,
                                 Alpha = 0,
                                 Texture = textures.Get(@"Cursor/menu-cursor-additive"),

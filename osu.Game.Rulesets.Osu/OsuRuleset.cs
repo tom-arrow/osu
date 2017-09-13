@@ -12,8 +12,6 @@ using osu.Game.Rulesets.UI;
 using System.Collections.Generic;
 using System.Linq;
 using osu.Framework.Graphics;
-using osu.Game.Rulesets.Osu.Scoring;
-using osu.Game.Rulesets.Scoring;
 using osu.Game.Overlays.Settings;
 using osu.Framework.Input.Bindings;
 
@@ -112,15 +110,11 @@ namespace osu.Game.Rulesets.Osu
             }
         }
 
-        public override Mod GetAutoplayMod() => new OsuModAutoplay();
-
         public override Drawable CreateIcon() => new SpriteIcon { Icon = FontAwesome.fa_osu_osu_o };
 
         public override DifficultyCalculator CreateDifficultyCalculator(Beatmap beatmap) => new OsuDifficultyCalculator(beatmap);
 
         public override string Description => "osu!";
-
-        public override ScoreProcessor CreateScoreProcessor() => new OsuScoreProcessor();
 
         public override SettingsSubsection CreateSettings() => new OsuSettings();
 
