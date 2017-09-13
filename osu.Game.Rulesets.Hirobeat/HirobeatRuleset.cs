@@ -3,10 +3,8 @@ using osu.Framework.Graphics.Textures;
 using osu.Framework.IO.Stores;
 using osu.Game.Beatmaps;
 using osu.Game.Rulesets.Hirobeat.Mods;
-using osu.Game.Rulesets.Hirobeat.Scoring;
 using osu.Game.Rulesets.Hirobeat.UI;
 using osu.Game.Rulesets.Mods;
-using osu.Game.Rulesets.Scoring;
 using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Hirobeat

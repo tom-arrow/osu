@@ -1,8 +1,6 @@
-﻿
-using osu.Game.Rulesets.Hirobeat.Judgements;
-using osu.Game.Rulesets.Judgements;
+﻿using osu.Game.Rulesets.Judgements;
 
-namespace osu.Game.Rulesets.Hirobeat.Objects.Drawables
+namespace osu.Game.Rulesets.Hirobeat.Judgements
 {
     public class HirobeatJudgement : Judgement
     {

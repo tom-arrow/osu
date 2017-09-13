@@ -3,8 +3,6 @@
 
 using osu.Framework.Graphics;
 using osu.Framework.Graphics.Containers;
-using osu.Game.Rulesets.Hirobeat.Objects;
-using osu.Game.Rulesets.Hirobeat.Objects.Drawables;
 using osu.Game.Rulesets.UI;
 using OpenTK;
 

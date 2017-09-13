@@ -8,8 +8,6 @@ using osu.Framework.Graphics.Containers;
 using osu.Game.Beatmaps;
 using osu.Game.Beatmaps.ControlPoints;
 using osu.Game.Rulesets;
-using osu.Game.Rulesets.Hirobeat.Objects;
-using osu.Game.Rulesets.Hirobeat.Objects.Drawables;
 using osu.Game.Rulesets.Hirobeat.UI;
 using osu.Game.Rulesets.Objects;
 using osu.Game.Rulesets.Taiko.Objects;
