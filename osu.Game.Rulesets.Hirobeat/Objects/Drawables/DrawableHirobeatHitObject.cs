@@ -4,14 +4,12 @@ using osu.Game.Rulesets.Objects.Drawables;
 
 namespace osu.Game.Rulesets.Hirobeat.Objects.Drawables
 {
-    public class DrawableHirobeatHitObject : DrawableHitObject<HirobeatHitObject, HirobeatJudgement>
+    public class DrawableHirobeatHitObject : DrawableHitObject<HirobeatHitObject>
     {
         public DrawableHirobeatHitObject(HirobeatHitObject hitObject)
             : base(hitObject)
         {
         }
-
-        protected override HirobeatJudgement CreateJudgement() => new HirobeatJudgement();
 
         protected override void UpdateState(ArmedState state)
         {

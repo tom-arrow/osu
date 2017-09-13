@@ -10,7 +10,7 @@ using OpenTK;
 
 namespace osu.Game.Rulesets.Hirobeat.UI
 {
-    public class HirobeatPlayfield : Playfield<HirobeatHitObject, HirobeatJudgement>
+    public class HirobeatPlayfield : Playfield
     {
         private readonly Container markers;
         private readonly Container judgementLayer;

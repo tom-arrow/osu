@@ -15,7 +15,7 @@ using osu.Game.Rulesets.UI;
 
 namespace osu.Game.Rulesets.Hirobeat.UI
 {
-    public class HirobeatRulesetContainer : RulesetContainer<HirobeatHitObject, HirobeatJudgement>
+    public class HirobeatRulesetContainer : RulesetContainer<HirobeatPlayfield, HirobeatHitObject>
     {
         private int gridSize;
 
@@ -39,7 +39,7 @@ namespace osu.Game.Rulesets.Hirobeat.UI
             return new HirobeatBeatmapConverter(IsForCurrentRuleset, gridSize);
         }
 
-        protected override DrawableHitObject<HirobeatHitObject, HirobeatJudgement> GetVisualRepresentation(HirobeatHitObject h)
+        protected override DrawableHitObject<HirobeatHitObject> GetVisualRepresentation(HirobeatHitObject h)
         {
             var note = h as Note;
             if (note != null)
@@ -47,9 +47,9 @@ namespace osu.Game.Rulesets.Hirobeat.UI
             return null;
         }
 
-        protected override Playfield<HirobeatHitObject, HirobeatJudgement> CreatePlayfield()
+        protected override Playfield CreatePlayfield()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

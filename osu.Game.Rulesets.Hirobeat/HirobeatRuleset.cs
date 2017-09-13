@@ -86,13 +86,10 @@ namespace osu.Game.Rulesets.Hirobeat
                     return new Mod[] { };
             }
         }
-
-        public override Mod GetAutoplayMod() => new ModAutoplay();
-
+       
         public override RulesetContainer CreateRulesetContainerWith(WorkingBeatmap beatmap, bool isForCurrentRuleset) => new HirobeatRulesetContainer(this, beatmap, isForCurrentRuleset);
 
         public override DifficultyCalculator CreateDifficultyCalculator(Beatmap beatmap) => new HirobeatDifficultyCalculator(beatmap);
-        public override ScoreProcessor CreateScoreProcessor() => new HirobeatScoreProcessor();
 
         public override string Description => "hirobeat!";
 

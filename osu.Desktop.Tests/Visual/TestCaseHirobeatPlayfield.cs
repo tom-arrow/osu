@@ -53,10 +53,6 @@ namespace osu.Desktop.Tests.Visual
 
         private void addNote()
         {
-            rulesetContainer.Playfield.Add(new DrawableNote(new HirobeatHitObject
-            {
-                StartTime = rulesetContainer.Playfield.Time.Current + delay
-            }));
         }
     }
 }

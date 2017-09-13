@@ -1,4 +1,4 @@
-﻿using osu.Framework.Extensions;
+﻿
 using osu.Game.Rulesets.Hirobeat.Judgements;
 using osu.Game.Rulesets.Judgements;
 
@@ -18,8 +18,6 @@ namespace osu.Game.Rulesets.Hirobeat.Objects.Drawables
         /// </summary>
         public HirobeatHitResult HirobeatResult;
 
-        public override string ResultString => HirobeatResult.GetDescription();
 
-        public override string MaxResultString => MAX_HIT_RESULT.GetDescription();
     }
 }
