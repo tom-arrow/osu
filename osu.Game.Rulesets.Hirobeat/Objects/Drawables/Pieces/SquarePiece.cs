@@ -8,7 +8,7 @@ namespace osu.Game.Rulesets.Hirobeat.Objects.Drawables.Pieces
     {
         public SquarePiece()
         {
-            Size = new Vector2((float)HirobeatHitObject.OBJECT_SIZE);
+            Size = new Vector2(HirobeatHitObject.OBJECT_SIZE);
             Masking = true;
             CornerRadius = 10;
 

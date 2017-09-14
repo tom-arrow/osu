@@ -26,7 +26,7 @@ namespace osu.Game.Rulesets.Hirobeat.UI
 
         public override ScoreProcessor CreateScoreProcessor() => new HirobeatScoreProcessor(this);
 
-        public override PassThroughInputManager CreateInputManager() => new HirobeatInputManager(Ruleset.RulesetInfo);
+        public override PassThroughInputManager CreateInputManager() => new HirobeatInputManager(Ruleset.RulesetInfo, 4);
 
         protected override BeatmapConverter<HirobeatHitObject> CreateBeatmapConverter()
         {
@@ -47,6 +47,6 @@ namespace osu.Game.Rulesets.Hirobeat.UI
             return null;
         }
 
-        protected override Playfield CreatePlayfield() => new HirobeatPlayfield();
+        protected override Playfield CreatePlayfield() => new HirobeatPlayfield(gridSize);
     }
 }

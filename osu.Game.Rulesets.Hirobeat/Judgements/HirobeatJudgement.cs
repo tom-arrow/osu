@@ -1,21 +1,24 @@
 ﻿using osu.Game.Rulesets.Judgements;
+using osu.Game.Rulesets.Objects.Drawables;
 
 namespace osu.Game.Rulesets.Hirobeat.Judgements
 {
     public class HirobeatJudgement : Judgement
     {
 
-        /// <summary>
-        /// The maximum result.
-        /// </summary>
-        public const HirobeatHitResult MAX_HIT_RESULT = HirobeatHitResult.Perfect;
-
-
-        /// <summary>
-        /// The result.
-        /// </summary>
-        public HirobeatHitResult HirobeatResult;
-
-
+        protected override int NumericResultFor(HitResult result)
+        {
+            switch (result)
+            {
+                default:
+                    return 0;
+                case HitResult.Meh:
+                    return 50;
+                case HitResult.Good:
+                    return 100;
+                case HitResult.Great:
+                    return 300;
+            }
+        }
     }
 }

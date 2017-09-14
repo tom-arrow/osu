@@ -1,25 +1,24 @@
-﻿// Copyright (c) 2007-2017 ppy Pty Ltd <contact@ppy.sh>.
-// Licensed under the MIT Licence - https://raw.githubusercontent.com/ppy/osu-framework/master/LICENCE
-using osu.Game.Rulesets.Objects.Drawables;
+﻿using osu.Game.Rulesets.Objects.Drawables;
 
 namespace osu.Game.Rulesets.Hirobeat.Objects.Drawables
 {
-    public class DrawableHirobeatHitObject : DrawableHitObject<HirobeatHitObject>
+    public abstract class DrawableHirobeatHitObject<TObject> : DrawableHitObject<HirobeatHitObject>
+        where TObject : HirobeatHitObject
     {
-        public DrawableHirobeatHitObject(HirobeatHitObject hitObject)
+        /// <summary>
+        /// The key that will trigger input for this hit object.
+        /// </summary>
+        protected HirobeatAction Action { get; }
+
+        public new TObject HitObject;
+
+        public DrawableHirobeatHitObject(TObject hitObject, HirobeatAction? action = null)
             : base(hitObject)
         {
-        }
+            HitObject = hitObject;
 
-        protected override void UpdateState(ArmedState state)
-        {
-            FinishTransforms();
-
-            
-        }
-
-        protected virtual void UpdateCurrentState(ArmedState state)
-        {
+            if (action != null)
+                Action = action.Value;
         }
     }
 }
