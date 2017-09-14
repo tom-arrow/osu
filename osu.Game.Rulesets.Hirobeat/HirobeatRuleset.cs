@@ -105,7 +105,7 @@ namespace osu.Game.Rulesets.Hirobeat
             }
         }
 
-        public override Drawable CreateIcon() => new SpriteIcon() { Icon = FontAwesome.fa_square };
+        public override Drawable CreateIcon() => new SpriteIcon() { Icon = FontAwesome.fa_square_o };
 
         public override RulesetContainer CreateRulesetContainerWith(WorkingBeatmap beatmap, bool isForCurrentRuleset) => new HirobeatRulesetContainer(this, beatmap, isForCurrentRuleset);
 
