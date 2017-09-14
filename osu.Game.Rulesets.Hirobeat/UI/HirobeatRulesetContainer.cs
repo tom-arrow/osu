@@ -47,9 +47,6 @@ namespace osu.Game.Rulesets.Hirobeat.UI
             return null;
         }
 
-        protected override Playfield CreatePlayfield()
-        {
-            throw new NotImplementedException();
-        }
+        protected override Playfield CreatePlayfield() => new HirobeatPlayfield();
     }
 }
