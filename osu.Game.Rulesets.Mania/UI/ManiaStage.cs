@@ -167,7 +167,7 @@ namespace osu.Game.Rulesets.Mania.UI
             h.OnJudgement += OnJudgement;
         }
 
-        public void Add(BarLine barline) => base.Add(new DrawableBarLine(barline));
+        public void Add(DrawableBarLine barline) => base.Add(barline);
 
         internal void OnJudgement(DrawableHitObject judgedObject, Judgement judgement)
         {

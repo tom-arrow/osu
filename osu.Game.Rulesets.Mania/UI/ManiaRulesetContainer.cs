@@ -67,7 +67,7 @@ namespace osu.Game.Rulesets.Mania.UI
         [BackgroundDependencyLoader]
         private void load()
         {
-            BarLines.ForEach(Playfield.Add);
+            BarLines.ForEach(barline => Playfield.Add(new DrawableBarLine(barline)));
         }
 
         protected sealed override Playfield CreatePlayfield() => new ManiaPlayfield(Beatmap.Stages)

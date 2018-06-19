@@ -13,6 +13,7 @@ using osu.Game.Rulesets.Judgements;
 using osu.Game.Rulesets.Mania.Beatmaps;
 using osu.Game.Rulesets.Objects.Drawables;
 using osu.Game.Rulesets.Mania.Configuration;
+using osu.Game.Rulesets.Mania.Objects.Drawables;
 using osu.Game.Rulesets.UI.Scrolling;
 
 namespace osu.Game.Rulesets.Mania.UI
@@ -65,7 +66,7 @@ namespace osu.Game.Rulesets.Mania.UI
 
         public override void Add(DrawableHitObject h) => getStageByColumn(((ManiaHitObject)h.HitObject).Column).Add(h);
 
-        public void Add(BarLine barline) => stages.ForEach(s => s.Add(barline));
+        public void Add(DrawableBarLine barline) => stages.ForEach(s => s.Add(barline));
 
         private ManiaStage getStageByColumn(int column)
         {
